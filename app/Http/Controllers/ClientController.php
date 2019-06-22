@@ -22,10 +22,8 @@ class ClientController extends Controller
 
     public function get(ClientGetRequest $request)
     {
-        $builder = $this->clientService->getClients($request->all());
-        $sales   = $builder->paginateWithLimit($data['itemsPerPage'], $data['page'], [$field]);
-        $sales->setCollection($strategy->individualSalePermissions($sales->getCollection()));
-
+        $collection = $this->clientService->getClients($request->all());
+        return $collection->toJson();
     }
 
     public function getById(Request $quest)

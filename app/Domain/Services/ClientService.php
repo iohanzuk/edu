@@ -20,5 +20,7 @@ class ClientService
         $data['name']              = $attributes->get('name', false);
         $data['couser_id']         = $attributes->get('couser_id', false);
         $data['course_class_id']   = $attributes->get('course_class_id', false);
+
+        return $this->repository->getClients($data);
     }
 }

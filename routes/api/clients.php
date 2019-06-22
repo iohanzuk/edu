@@ -1,6 +1,6 @@
 <?php
 Route::group([
-    'prefix'    => 'client',
+    'prefix'    => 'cliente',
 ], function () {
     Route::post('/', 'ClientController@post');
     Route::get('/', 'ClientController@get');
